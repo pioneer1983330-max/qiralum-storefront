@@ -86,6 +86,7 @@ export function ProductView({ product, enableColorSwitch }: { product: Product; 
               <button
                 key={src}
                 type="button"
+                role="tab"
                 aria-label={labels[i] ?? `Still ${i + 1}`}
                 aria-selected={src === active}
                 onClick={() => setActive(src)}
