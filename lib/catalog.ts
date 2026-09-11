@@ -23,12 +23,14 @@ export type Product = {
   size: string;
   sizeNote: string;
   price: number;
-  homeHero: string;
-  pdpMain: string;
+  cardImage: string;
+  gallery: string[];
   tone: "onyx" | "terracotta";
 };
 
 export const PRICE = 27.9;
+export const HOME_HERO = "/temp/temp_home_hero.png";
+export const NFC_NEAR = "/temp/temp_nfc_near_phone.png";
 
 export const PRODUCTS: Record<Sku, Product> = {
   "04_black_agate": {
@@ -43,8 +45,12 @@ export const PRODUCTS: Record<Sku, Product> = {
     size: "210 × 18 mm",
     sizeNote: "Inner length 210 mm · width 18 mm",
     price: PRICE,
-    homeHero: "/temp/QIRALUM_04_onyx_temp_hero_01.png",
-    pdpMain: "/temp/QIRALUM_04_onyx_temp_pdp_01.png",
+    cardImage: "/temp/temp_04_hero.png",
+    gallery: [
+      "/temp/temp_04_hero.png",
+      "/temp/temp_04_detail.png",
+      "/temp/temp_04_lifestyle.png",
+    ],
     tone: "onyx",
   },
   "07_terracotta_bloom": {
@@ -59,8 +65,12 @@ export const PRODUCTS: Record<Sku, Product> = {
     size: "190 × 16 mm",
     sizeNote: "Inner length 190 mm · width 16 mm",
     price: PRICE,
-    homeHero: "/temp/QIRALUM_07_terracotta_temp_hero_01.png",
-    pdpMain: "/temp/QIRALUM_07_terracotta_temp_pdp_01.png",
+    cardImage: "/temp/temp_07_hero.png",
+    gallery: [
+      "/temp/temp_07_hero.png",
+      "/temp/temp_07_detail.png",
+      "/temp/temp_07_lifestyle.png",
+    ],
     tone: "terracotta",
   },
 };

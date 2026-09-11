@@ -17,6 +17,7 @@ export function ProductView({ product, enableColorSwitch }: { product: Product; 
   const pair = PRODUCTS[otherSku(product.sku)];
   const [wished, setWished] = useState(false);
   const [note, setNote] = useState("");
+  const [active, setActive] = useState(product.gallery[0]);
   const viewProps = useMemo(
     () => ({
       page_id: product.pageId,
@@ -30,6 +31,10 @@ export function ProductView({ product, enableColorSwitch }: { product: Product; 
   useEffect(() => {
     track("product_view", viewProps);
   }, [viewProps]);
+
+  useEffect(() => {
+    setActive(product.gallery[0]);
+  }, [product]);
 
   useEffect(() => {
     const sync = () => setWished(getWish().includes(product.sku));
@@ -64,55 +69,80 @@ export function ProductView({ product, enableColorSwitch }: { product: Product; 
     });
   }
 
+  const labels = ["Hero", "Detail", "Lifestyle"];
+
   return (
-    <article data-page-id={product.pageId} data-sku={product.sku} className="mx-auto max-w-5xl px-4 py-8">
-      <p className="text-xs tracking-[0.2em] text-[var(--muted)]">QIRALUM · {product.sku}</p>
-      <div className="mt-4 grid gap-8 md:grid-cols-2">
-        <div className="space-y-3">
-          <TempPhoto
-            src={product.pdpMain}
-            alt={`${product.colorway} TEMP PDP`}
-            className="overflow-hidden rounded-lg border border-[var(--line)]"
-          />
-        </div>
+    <article data-page-id={product.pageId} data-sku={product.sku} className="mx-auto max-w-6xl px-5 py-8 md:px-8 md:py-12">
+      <p className="eyebrow">QIRALUM · {product.sku}</p>
+      <div className="mt-6 grid items-start gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(20rem,0.85fr)] lg:gap-14">
         <div>
-          <h1 className="font-serif text-3xl leading-tight">{product.title}</h1>
-          <p className="mt-2 text-sm text-[var(--muted)]">{product.colorway}</p>
-          <p className="mt-4 text-2xl tabular-nums">{formatPrice(product.price)}</p>
-          <p className="mt-4 text-[15px] leading-relaxed">{product.short}</p>
-          <dl className="mt-6 grid grid-cols-2 gap-3 text-sm">
+          <TempPhoto
+            src={active}
+            alt={`${product.colorway} TEMP`}
+            className="overflow-hidden bg-[var(--paper-deep)]"
+          />
+          <div className="mt-3 grid grid-cols-3 gap-2" role="tablist" aria-label="Product stills">
+            {product.gallery.map((src, i) => (
+              <button
+                key={src}
+                type="button"
+                aria-label={labels[i] ?? `Still ${i + 1}`}
+                aria-selected={src === active}
+                onClick={() => setActive(src)}
+                className={`overflow-hidden bg-[var(--paper-deep)] ring-1 transition ${
+                  src === active ? "ring-[var(--ink)]" : "ring-transparent opacity-80 hover:opacity-100"
+                }`}
+              >
+                <TempPhoto
+                  src={src}
+                  alt={`${product.colorway} ${labels[i] ?? "still"} TEMP`}
+                  fit="cover"
+                  className="aspect-video"
+                />
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="lg:sticky lg:top-24">
+          <p className="temp-chip">TEMP · 非终稿</p>
+          <h1 className="mt-5 font-serif text-4xl leading-[1.12] md:text-5xl">{product.colorway}</h1>
+          <p className="mt-3 max-w-md text-sm leading-relaxed text-[var(--muted)]">{product.title}</p>
+          <p className="mt-6 font-serif text-3xl tabular-nums">{formatPrice(product.price)}</p>
+          <p className="mt-5 max-w-md text-[15px] leading-relaxed">{product.short}</p>
+          <dl className="mt-8 grid grid-cols-2 gap-x-6 gap-y-4 text-sm">
             <div>
-              <dt className="text-[var(--muted)]">Size</dt>
-              <dd>{product.size}</dd>
+              <dt className="eyebrow">Size</dt>
+              <dd className="mt-1">{product.size}</dd>
             </div>
             <div>
-              <dt className="text-[var(--muted)]">Fit</dt>
-              <dd>{product.sizeNote}</dd>
+              <dt className="eyebrow">Fit</dt>
+              <dd className="mt-1">{product.sizeNote}</dd>
             </div>
             <div>
-              <dt className="text-[var(--muted)]">SKU</dt>
-              <dd className="font-mono text-xs">{product.sku}</dd>
+              <dt className="eyebrow">SKU</dt>
+              <dd className="mt-1 font-mono text-xs">{product.sku}</dd>
             </div>
             <div>
-              <dt className="text-[var(--muted)]">Color</dt>
-              <dd>{product.skuColor}</dd>
+              <dt className="eyebrow">Color</dt>
+              <dd className="mt-1">{product.skuColor}</dd>
             </div>
           </dl>
 
           {enableColorSwitch ? (
-            <div className="mt-6">
-              <p className="text-sm text-[var(--muted)]">Color</p>
-              <div className="mt-2 flex gap-2" data-module="color_switch">
+            <div className="mt-8">
+              <p className="eyebrow">Color</p>
+              <div className="mt-3 flex flex-wrap gap-2" data-module="color_switch">
                 <Link
                   href={`/products/${product.slug}/`}
-                  className="rounded-full border border-[var(--ink)] px-3 py-1 text-sm"
+                  className="rounded-full border border-[var(--ink)] bg-[var(--ink)] px-4 py-2 text-sm text-[var(--paper)]"
                   aria-current="true"
                 >
                   {product.colorway}
                 </Link>
                 <Link
                   href={`/products/${pair.slug}/`}
-                  className="rounded-full border border-[var(--line)] px-3 py-1 text-sm"
+                  className="rounded-full border border-[var(--line)] px-4 py-2 text-sm"
                   onClick={() => switchColor(pair.sku)}
                 >
                   {pair.colorway}
@@ -120,26 +150,26 @@ export function ProductView({ product, enableColorSwitch }: { product: Product; 
               </div>
             </div>
           ) : (
-            <p className="mt-6 text-sm">
+            <p className="mt-8 text-sm text-[var(--muted)]">
               Also in{" "}
-              <Link href={`/products/${pair.slug}/`} className="underline">
+              <Link href={`/products/${pair.slug}/`} className="text-[var(--ink)] underline">
                 {pair.colorway}
               </Link>
               .
             </p>
           )}
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            <button type="button" className="btn-primary" onClick={atc} data-action="atc">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <button type="button" className="btn-primary w-full sm:w-auto" onClick={atc} data-action="atc">
               Add to cart
             </button>
-            <button type="button" className="btn-ghost" onClick={wish} data-action="wishlist">
+            <button type="button" className="btn-ghost w-full sm:w-auto" onClick={wish} data-action="wishlist">
               {wished ? "Wishlisted" : "Add to wishlist"}
             </button>
           </div>
           {note ? <p className="mt-3 text-sm text-[var(--terracotta)]">{note}</p> : null}
 
-          <p className="mt-8 text-xs text-[var(--muted)]">
+          <p className="mt-10 max-w-md text-xs leading-relaxed text-[var(--muted)]">
             Jewelry first. Includes a quiet in-piece experience after you connect — see{" "}
             <Link href="/how-to-connect/" className="underline">
               How to connect

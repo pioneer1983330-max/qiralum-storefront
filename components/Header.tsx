@@ -14,20 +14,20 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-20 border-b border-[var(--line)] bg-[color:var(--paper)]/95 backdrop-blur">
-      <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3">
-        <Link href="/" className="tracking-[0.22em] text-sm font-semibold">
+    <header className="sticky top-0 z-20 border-b border-[var(--line)] bg-[color:var(--paper)]/92 backdrop-blur-md">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 md:px-8">
+        <Link href="/" className="text-[13px] font-semibold tracking-[0.32em]">
           QIRALUM
         </Link>
-        <nav className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
+        <nav className="flex flex-wrap items-center justify-end gap-x-5 gap-y-1 text-[13px] tracking-[0.04em]">
           <Link href="/plp/">Shop</Link>
           <Link href="/how-to-connect/">Connect</Link>
           <Link href="/faq/">FAQ</Link>
-          <Link href="/wishlist/" className="tabular-nums">
-            Wishlist{counts.wish ? ` (${counts.wish})` : ""}
+          <Link href="/wishlist/" className="tabular-nums text-[var(--muted)]">
+            Wish{counts.wish ? ` ${counts.wish}` : ""}
           </Link>
           <Link href="/cart/" className="tabular-nums">
-            Cart{counts.cart ? ` (${counts.cart})` : ""}
+            Cart{counts.cart ? ` ${counts.cart}` : ""}
           </Link>
         </nav>
       </div>

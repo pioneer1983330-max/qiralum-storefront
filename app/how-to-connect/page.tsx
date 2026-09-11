@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import { Placeholder } from "@/components/Placeholder";
+import { TempPhoto } from "@/components/TempPhoto";
+import { NFC_NEAR } from "@/lib/catalog";
 import { track } from "@/lib/analytics";
 
 export default function HowToConnectPage() {
@@ -13,29 +14,42 @@ export default function HowToConnectPage() {
   }, []);
 
   return (
-    <article data-page-id="nfc_preview" className="mx-auto max-w-3xl px-4 py-10">
-      <p className="text-xs tracking-[0.2em] text-[var(--muted)]">QIRALUM · PREVIEW</p>
-      <h1 className="mt-3 font-serif text-4xl">How to connect</h1>
-      <p className="mt-4 text-lg leading-relaxed">
-        Unlock your phone and hold it <em>near</em> your QIRALUM bracelet. Leave a little
-        air — there is no need to press or jam the phone onto the piece.
-      </p>
-      <Placeholder
-        id="temp_nfc_near_phone"
-        className="mt-8 overflow-hidden rounded-lg border border-[var(--line)]"
-      />
-      <ol className="mt-8 list-decimal space-y-3 pl-5 text-[15px] leading-relaxed">
-        <li>Wake the phone and keep the screen unlocked.</li>
-        <li>Bring the back of the phone near the bracelet, not flush-forced onto it.</li>
-        <li>Wait for the system prompt. If nothing appears, shift a few millimeters and try again.</li>
-      </ol>
+    <article data-page-id="nfc_preview" className="mx-auto max-w-6xl px-5 py-10 md:px-8 md:py-16">
+      <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
+        <div>
+          <p className="eyebrow">QIRALUM · PREVIEW</p>
+          <h1 className="mt-4 font-serif text-4xl leading-[1.12] md:text-5xl">How to connect</h1>
+          <p className="mt-5 max-w-md text-lg leading-relaxed text-[var(--muted)]">
+            Unlock your phone and hold it <em>near</em> your QIRALUM bracelet. Leave a little
+            air — there is no need to press or jam the phone onto the piece.
+          </p>
+          <ol className="mt-10 space-y-6">
+            {[
+              "Wake the phone and keep the screen unlocked.",
+              "Bring the back of the phone near the bracelet, not flush-forced onto it.",
+              "Wait for the system prompt. If nothing appears, shift a few millimeters and try again.",
+            ].map((step, i) => (
+              <li key={step} className="flex gap-4 text-[15px] leading-relaxed">
+                <span className="font-serif text-xl text-[var(--gold)]">{String(i + 1).padStart(2, "0")}</span>
+                <span className="pt-1">{step}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+        <TempPhoto
+          src={NFC_NEAR}
+          alt="Hold the phone near the bracelet — TEMP"
+          className="overflow-hidden bg-[var(--paper-deep)]"
+        />
+      </div>
+
       <section
-        className="mt-12 rounded-lg border border-[var(--line)] bg-white/40 p-5"
+        className="mt-16 max-w-2xl border-t border-[var(--line)] pt-10"
         data-module="experience"
       >
-        <p className="text-xs tracking-[0.18em] text-[var(--muted)]">EXPERIENCE</p>
-        <h2 className="mt-2 font-serif text-2xl">Barakah Standard Experience</h2>
-        <p className="mt-3 text-sm leading-relaxed">
+        <p className="eyebrow">Experience</p>
+        <h2 className="mt-3 font-serif text-2xl md:text-3xl">Barakah Standard Experience</h2>
+        <p className="mt-4 text-sm leading-relaxed text-[var(--muted)]">
           After you connect, QIRALUM opens a quiet keepsake layer named Barakah Standard
           Experience. It is an experience name only — not the selling brand, not a
           fitness tracker, not a claim of guaranteed blessing.
