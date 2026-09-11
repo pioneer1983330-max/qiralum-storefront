@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Libre_Baskerville } from "next/font/google";
+import { Cormorant_Garamond, DM_Sans, Geist_Mono } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const sans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
+const serif = Cormorant_Garamond({
+  variable: "--font-cormorant",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const mono = Geist_Mono({
   variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const serif = Libre_Baskerville({
-  variable: "--font-serif",
-  weight: ["400", "700"],
   subsets: ["latin"],
 });
 
@@ -37,9 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${serif.variable} antialiased`}
-      >
+      <body className={`${sans.variable} ${serif.variable} ${mono.variable} antialiased`}>
         <Header />
         <main className="min-h-[70vh]">{children}</main>
         <Footer />

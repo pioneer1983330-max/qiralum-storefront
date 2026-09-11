@@ -12,19 +12,18 @@ export function ProductCard({ product }: { product: Product }) {
       <TempPhoto
         src={product.cardImage}
         alt={`${product.colorway} TEMP`}
-        className="overflow-hidden bg-[var(--paper-deep)]"
+        fit="cover"
+        className="aspect-[4/5] bg-[var(--paper-deep)]"
+        position={product.tone === "terracotta" ? "70% center" : "center"}
       />
-      <div className="flex items-end justify-between gap-4 px-1 pt-5">
-        <div className="space-y-1">
+      <div className="flex items-end justify-between gap-4 pt-6">
+        <div>
           <p className="eyebrow">QIRALUM</p>
-          <h2 className="font-serif text-2xl md:text-[1.75rem]">{product.colorway}</h2>
-          <p className="text-sm text-[var(--muted)]">{product.size}</p>
+          <h2 className="mt-2 font-serif text-3xl leading-none">{product.colorway}</h2>
+          <p className="mt-2 text-sm text-[var(--muted)]">{product.size}</p>
         </div>
-        <p className="pb-1 text-sm tabular-nums tracking-wide">{formatPrice(product.price)}</p>
+        <p className="pb-0.5 text-sm tabular-nums">{formatPrice(product.price)}</p>
       </div>
-      <p className="mt-3 px-1 text-xs tracking-[0.16em] text-[var(--muted)] uppercase transition group-hover:text-[var(--ink)]">
-        View piece →
-      </p>
     </Link>
   );
 }
