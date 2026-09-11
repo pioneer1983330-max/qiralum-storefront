@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-label="temp_04_wrist">
+  <rect width="1200" height="720" fill="#1f1f1f"/>
+  <rect x="48" y="48" width="1104" height="624" fill="none" stroke="#8a8a8a" stroke-width="2"/>
+  <text x="72" y="100" fill="#8a8a8a" font-family="Georgia, serif" font-size="22" letter-spacing="6">QIRALUM</text>
+  <text x="72" y="380" fill="#f4efe8" font-family="ui-sans-serif, sans-serif" font-size="48">temp_04_wrist</text>
+  <ellipse cx="900" cy="400" rx="160" ry="70" fill="none" stroke="#cfcfcf" stroke-width="14"/>
+</svg>

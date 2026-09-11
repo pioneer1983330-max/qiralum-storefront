@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-label="temp_04_hero">
+  <rect width="1200" height="720" fill="#161616"/>
+  <rect x="48" y="48" width="1104" height="624" fill="none" stroke="#b0894a" stroke-width="2"/>
+  <text x="72" y="100" fill="#b0894a" font-family="Georgia, serif" font-size="22" letter-spacing="6">QIRALUM</text>
+  <text x="72" y="380" fill="#f4efe8" font-family="ui-sans-serif, sans-serif" font-size="48">temp_04_hero</text>
+  <circle cx="980" cy="360" r="90" fill="none" stroke="#cfcfcf" stroke-width="18"/>
+</svg>

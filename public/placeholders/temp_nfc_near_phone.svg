@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-label="temp_nfc_near_phone">
+  <rect width="1200" height="720" fill="#f4efe8"/>
+  <text x="60" y="70" fill="#b0894a" font-family="Georgia, serif" font-size="20" letter-spacing="6">QIRALUM</text>
+  <text x="60" y="110" fill="#1b1714" font-family="ui-sans-serif, sans-serif" font-size="28">temp_nfc_near_phone</text>
+  <text x="60" y="150" fill="#6b625a" font-size="16">Phone near the piece — not jammed onto it</text>
+  <!-- phone, left, clearly separated -->
+  <rect x="160" y="210" rx="28" ry="28" width="220" height="400" fill="#1b1714"/>
+  <rect x="178" y="248" rx="8" ry="8" width="184" height="300" fill="#d7e4ef"/>
+  <circle cx="270" cy="575" r="10" fill="#f4efe8"/>
+  <text x="270" y="640" text-anchor="middle" fill="#1b1714" font-size="16">phone</text>
+  <!-- gap + near waves, not overlapping the bracelet -->
+  <path d="M430 400 h90" stroke="#b0894a" stroke-width="2" stroke-dasharray="6 8"/>
+  <path d="M500 360 c30 0 30 80 0 80" fill="none" stroke="#b0894a" stroke-width="3"/>
+  <path d="M530 335 c50 0 50 130 0 130" fill="none" stroke="#b0894a" stroke-width="2"/>
+  <text x="470" y="330" fill="#b85c38" font-size="18">near</text>
+  <!-- bracelet on the right, gap preserved -->
+  <ellipse cx="820" cy="400" rx="150" ry="58" fill="none" stroke="#1b1714" stroke-width="16"/>
+  <ellipse cx="820" cy="400" rx="118" ry="36" fill="none" stroke="#b0894a" stroke-width="3"/>
+  <text x="820" y="500" text-anchor="middle" fill="#1b1714" font-size="16">bracelet</text>
+  <text x="600" y="680" text-anchor="middle" fill="#6b625a" font-size="14">Hold near. Do not press the phone onto the chip.</text>
+</svg>
