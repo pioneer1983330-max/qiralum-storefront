@@ -1,6 +1,6 @@
 # QIRALUM independent-site DRAFT storefront
 
-**Public preview (no login):** https://starlit-fudge-0c92de.netlify.app/
+**Public preview (no login):** https://enchanting-tulumba-af5887.netlify.app/
 
 Selling brand: **QIRALUM**. Barakah is experience-only (How to connect experience block). No gender SKUs. Jewelry-first — not a counter/gadget main narrative. Launch price **$27.90**.
 
