@@ -16,9 +16,9 @@ npm run build  # writes /out
 
 | Route | Page | Notes |
 |---|---|---|
-| `/` | Home | `temp_home_hero`, dual SKU entry, $27.90 |
-| `/products/04-urban-onyx` | PDP 04 | sku `04_black_agate`, 210×18, `temp_04_*`, ATC + wishlist |
-| `/products/07-terracotta-bloom` | PDP 07 | sku `07_terracotta_bloom`, 190×16, `temp_07_*`, ATC + wishlist + color_switch |
+| `/` | Home | dual TEMP heroes (04∥07), $27.90 |
+| `/products/04-urban-onyx` | PDP 04 | sku `04_black_agate`, 210×18, TEMP PDP still, ATC + wishlist |
+| `/products/07-terracotta-bloom` | PDP 07 | sku `07_terracotta_bloom`, 190×16, TEMP PDP still, ATC + wishlist + color_switch |
 | `/how-to-connect` | NFC preview | `temp_nfc_near_phone`; phone *near* (not jammed); no big 触碰激活 H1; Barakah only in experience block |
 | `/faq` | FAQ | |
 | `/plp` | Launch list stub | |
@@ -64,4 +64,4 @@ Pushed to `window.dataLayer` and `console.debug('[qiralum:p0]', payload)`.
 
 Common fields: `page_id`, `platform=web_store`, `sku` (when relevant), `anonymous_id`, `session_id`, `ts`.
 
-Placeholders are labeled SVG assets under `public/placeholders/` (`temp_home_hero`, `temp_04_*`, `temp_07_*`, `temp_nfc_near_phone`).
+TEMP stills (非终稿) live in `public/temp/` and are wired on Home + both PDPs. NFC how-to still uses `public/placeholders/temp_nfc_near_phone.svg`. Replace stills after real sample photos. Do not crop to fully expose an NFC sensing arc.

@@ -11,7 +11,7 @@ import {
   type Sku,
 } from "@/lib/catalog";
 import { addToCart, getWish, toggleWish, subscribe } from "@/lib/store";
-import { Placeholder } from "./Placeholder";
+import { TempPhoto } from "./TempPhoto";
 
 export function ProductView({ product, enableColorSwitch }: { product: Product; enableColorSwitch: boolean }) {
   const pair = PRODUCTS[otherSku(product.sku)];
@@ -69,9 +69,11 @@ export function ProductView({ product, enableColorSwitch }: { product: Product; 
       <p className="text-xs tracking-[0.2em] text-[var(--muted)]">QIRALUM · {product.sku}</p>
       <div className="mt-4 grid gap-8 md:grid-cols-2">
         <div className="space-y-3">
-          {product.placeholders.map((id) => (
-            <Placeholder key={id} id={id} className="overflow-hidden rounded-lg border border-[var(--line)]" />
-          ))}
+          <TempPhoto
+            src={product.pdpMain}
+            alt={`${product.colorway} TEMP PDP`}
+            className="overflow-hidden rounded-lg border border-[var(--line)]"
+          />
         </div>
         <div>
           <h1 className="font-serif text-3xl leading-tight">{product.title}</h1>

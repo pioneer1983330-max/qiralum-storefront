@@ -23,7 +23,8 @@ export type Product = {
   size: string;
   sizeNote: string;
   price: number;
-  placeholders: string[];
+  homeHero: string;
+  pdpMain: string;
   tone: "onyx" | "terracotta";
 };
 
@@ -42,7 +43,8 @@ export const PRODUCTS: Record<Sku, Product> = {
     size: "210 × 18 mm",
     sizeNote: "Inner length 210 mm · width 18 mm",
     price: PRICE,
-    placeholders: ["temp_04_hero", "temp_04_wrist", "temp_04_detail"],
+    homeHero: "/temp/QIRALUM_04_onyx_temp_hero_01.png",
+    pdpMain: "/temp/QIRALUM_04_onyx_temp_pdp_01.png",
     tone: "onyx",
   },
   "07_terracotta_bloom": {
@@ -57,7 +59,8 @@ export const PRODUCTS: Record<Sku, Product> = {
     size: "190 × 16 mm",
     sizeNote: "Inner length 190 mm · width 16 mm",
     price: PRICE,
-    placeholders: ["temp_07_hero", "temp_07_wrist", "temp_07_detail"],
+    homeHero: "/temp/QIRALUM_07_terracotta_temp_hero_01.png",
+    pdpMain: "/temp/QIRALUM_07_terracotta_temp_pdp_01.png",
     tone: "terracotta",
   },
 };

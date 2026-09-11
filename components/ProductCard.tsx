@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { formatPrice, type Product } from "@/lib/catalog";
-import { Placeholder } from "./Placeholder";
+import { TempPhoto } from "./TempPhoto";
 
 export function ProductCard({ product }: { product: Product }) {
   return (
@@ -9,7 +9,11 @@ export function ProductCard({ product }: { product: Product }) {
       className="group block overflow-hidden rounded-lg border border-[var(--line)]"
       data-sku={product.sku}
     >
-      <Placeholder id={product.placeholders[0]} className="aspect-[3/2]" />
+      <TempPhoto
+        src={product.homeHero}
+        alt={`${product.colorway} TEMP`}
+        className="aspect-video"
+      />
       <div className="space-y-1 p-4">
         <p className="text-xs tracking-[0.16em] text-[var(--muted)]">QIRALUM</p>
         <h2 className="font-serif text-xl">{product.colorway}</h2>
