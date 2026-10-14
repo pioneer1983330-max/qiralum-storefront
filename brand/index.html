@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QIRALUM 标志</title>
+  <link rel="icon" href="qiralum-mark.svg">
+  <style>
+    :root {
+      --ink: #162041;
+      --gold: #C5A340;
+      --paper: #F4F1EB;
+      --white: #ffffff;
+      --muted: #5c6b82;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Avenir Next", "Segoe UI", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+    img { display: block; max-width: 100%; min-width: 0; height: auto; }
+    .wrap { width: min(960px, calc(100% - 48px)); margin: 0 auto; }
+    header {
+      padding: 28px 0 0;
+    }
+    .eyebrow {
+      margin: 0;
+      font-size: 12px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .hero {
+      padding: 104px 0 72px;
+    }
+    .hero img { width: min(680px, 100%); margin: 0 auto; }
+    .lede {
+      width: min(38em, 100%);
+      margin: 36px auto 0;
+      text-align: center;
+      font-family: Palatino, "Palatino Linotype", "Songti SC", "Noto Serif CJK SC", serif;
+      font-size: 18px;
+      line-height: 1.65;
+    }
+    section { padding: 28px 0 8px; }
+    .sheet {
+      background: var(--white);
+      padding: 56px 0 28px;
+      margin-top: 56px;
+    }
+    .lockup { margin: 0 0 48px; }
+    .lockup figcaption,
+    .swatch span,
+    .scale figcaption {
+      display: block;
+      margin: 0 0 14px;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .lockup img.wide { width: min(760px, 100%); }
+    .lockup img.stacked { width: min(560px, 100%); }
+    .lockup img.mark { width: 132px; }
+    .night {
+      background: var(--ink);
+      padding: 72px 0;
+      margin-top: 28px;
+    }
+    .night figcaption { color: #c5cedb; }
+    .night img { width: min(760px, 100%); }
+    .scale-row {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin-top: 8px;
+    }
+    .scale-row img.h1 { width: 46%; }
+    .scale-row img.h2 { width: 28%; }
+    .scale-row img.h3 { width: 16%; }
+    .marks {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin-top: 28px;
+    }
+    .marks img { width: 72px; }
+    .marks img.m2 { width: 40px; }
+    .marks img.m3 { width: 22px; }
+    .colors {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 8px;
+    }
+    .swatch { margin: 0; }
+    .chip { height: 148px; }
+    .chip.ink { background: var(--ink); }
+    .chip.gold { background: var(--gold); }
+    .swatch strong { display: block; margin-top: 12px; font-weight: 500; letter-spacing: 0.04em; }
+    .swatch em { font-style: normal; color: var(--muted); font-size: 13px; letter-spacing: 0.08em; }
+    .note {
+      margin: 22px 0 0;
+      max-width: 40em;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .options { padding-bottom: 24px; }
+    h2, .options h2 {
+      margin: 8px 0;
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+    }
+    .opt {
+      margin: 28px 0 0;
+      padding-top: 22px;
+      border-top: 1px solid #e3ddd3;
+    }
+    .opt strong { font-weight: 500; letter-spacing: 0.04em; }
+    .opt span { color: var(--muted); font-size: 14px; }
+    .opt img {
+      width: min(860px, 100%);
+      margin-top: 12px;
+      background: var(--white);
+    }
+    footer {
+      padding: 28px 0 64px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    @media (max-width: 640px) {
+      .hero { padding-top: 40px; }
+      .lede { font-size: 16px; text-align: left; }
+      .colors { grid-template-columns: 1fr; }
+      .sheet, .night { padding-left: 0; padding-right: 0; }
+      .scale-row { flex-wrap: wrap; }
+      .scale-row img.h1 { width: 100%; }
+      .scale-row img.h2 { width: 62%; }
+      .scale-row img.h3 { width: 34%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <p class="eyebrow">Qiralum</p>
+  </header>
+
+  <div class="hero wrap">
+    <img src="proposal/qiralum-logo.svg" alt="中东与伊斯兰方案的横式标志">
+    <p class="lede">这是一套中东与伊斯兰方案。符号是圆里的两枚方环，叠成八角星，线条与字重对齐，金点在星心。拉丁字用 Amiri。阿文用库法体，写作 قيرالوم，排成一行。外缘仍与字高对齐。</p>
+  </div>
+
+  <div class="sheet">
+    <div class="wrap">
+      <figure class="lockup">
+        <figcaption>横式</figcaption>
+        <img class="wide" src="proposal/qiralum-logo.svg" alt="方案横式标志">
+      </figure>
+      <figure class="lockup">
+        <figcaption>竖式</figcaption>
+        <img class="stacked" src="proposal/qiralum-logo-stacked.svg" alt="方案竖式标志，含阿拉伯文">
+      </figure>
+      <figure class="lockup">
+        <figcaption>符号</figcaption>
+        <img class="mark" src="proposal/qiralum-mark.svg" alt="八角星符号">
+      </figure>
+      <figure class="lockup">
+        <figcaption>单色</figcaption>
+        <img class="wide" src="proposal/qiralum-logo-mono.svg" alt="单色方案">
+      </figure>
+    </div>
+  </div>
+
+  <div class="night">
+    <div class="wrap">
+      <figure class="lockup" style="margin-bottom:0">
+        <figcaption>反白</figcaption>
+        <img src="proposal/qiralum-logo-reversed.svg" alt="深色背景上的方案">
+      </figure>
+    </div>
+  </div>
+
+  <section class="wrap">
+    <h2>现行锁档</h2>
+    <p class="note">英伦巴斯科维尔，双环符号。金点在开口里，贴着外环。</p>
+    <img src="qiralum-logo.svg" alt="现行横式标志" style="width:min(680px,100%);margin-top:22px">
+  </section>
+
+  <section class="wrap">
+    <figure class="scale">
+      <figcaption>缩小</figcaption>
+      <div class="scale-row">
+        <img class="h1" src="proposal/qiralum-logo.svg" alt="较大尺寸的方案">
+        <img class="h2" src="proposal/qiralum-logo.svg" alt="中等尺寸的方案">
+        <img class="h3" src="proposal/qiralum-logo.svg" alt="较小尺寸的方案">
+      </div>
+      <div class="marks">
+        <img src="proposal/qiralum-mark.svg" alt="72 像素八角星">
+        <img class="m2" src="proposal/qiralum-mark.svg" alt="40 像素八角星">
+        <img class="m3" src="proposal/qiralum-mark.svg" alt="22 像素八角星">
+      </div>
+    </figure>
+  </section>
+
+  <section class="wrap">
+    <div class="colors">
+      <figure class="swatch">
+        <div class="chip ink"></div>
+        <strong>墨蓝</strong>
+        <em>#162041</em>
+      </figure>
+      <figure class="swatch">
+        <div class="chip gold"></div>
+        <strong>古金</strong>
+        <em>#C5A340</em>
+      </figure>
+    </div>
+    <p class="note">金点在浅底和深底上都用古金。单色版本只在无法印第二色时使用。这套方案的金点在星心。现行双环的金点仍在开口里，开口在正上方。</p>
+  </section>
+
+  <section class="wrap options" id="designs">
+    <h2>二十款方向</h2>
+    <p class="note">同一套墨蓝和古金。从时尚、简约、清秀展开，符号和字距各自不同。选出一款，再收成正式锁档。</p>
+    <figure class="opt">
+      <strong>01 清秀</strong> <span>细衬线，线很轻</span>
+      <img src="designs/01-qingxiu.svg" alt="清秀">
+    </figure>
+    <figure class="opt">
+      <strong>02 简约</strong> <span>一根细环，字干净</span>
+      <img src="designs/02-jianyue.svg" alt="简约">
+    </figure>
+    <figure class="opt">
+      <strong>03 时尚</strong> <span>高对比，字距拉开</span>
+      <img src="designs/03-shishang.svg" alt="时尚">
+    </figure>
+    <figure class="opt">
+      <strong>04 轻盈</strong> <span>极细，像薄金属</span>
+      <img src="designs/04-qing.svg" alt="轻盈">
+    </figure>
+    <figure class="opt">
+      <strong>05 英伦</strong> <span>巴斯科维尔，双环</span>
+      <img src="designs/05-yinglun.svg" alt="英伦">
+    </figure>
+    <figure class="opt">
+      <strong>06 细几何</strong> <span>竖画细，几何</span>
+      <img src="designs/06-xihe.svg" alt="细几何">
+    </figure>
+    <figure class="opt">
+      <strong>07 圆润</strong> <span>转角是圆的</span>
+      <img src="designs/07-yuanrun.svg" alt="圆润">
+    </figure>
+    <figure class="opt">
+      <strong>08 高定</strong> <span>时装衬线，符号收小</span>
+      <img src="designs/08-gaoding.svg" alt="高定">
+    </figure>
+    <figure class="opt">
+      <strong>09 石刻</strong> <span>碑刻大写</span>
+      <img src="designs/09-shike.svg" alt="石刻">
+    </figure>
+    <figure class="opt">
+      <strong>10 单线</strong> <span>几乎是一条线</span>
+      <img src="designs/10-danxian.svg" alt="单线">
+    </figure>
+    <figure class="opt">
+      <strong>11 宽幅</strong> <span>字幅宽，节奏慢</span>
+      <img src="designs/11-kuanfu.svg" alt="宽幅">
+    </figure>
+    <figure class="opt">
+      <strong>12 软衬线</strong> <span>衬线偏软</span>
+      <img src="designs/12-ruan.svg" alt="软衬线">
+    </figure>
+    <figure class="opt">
+      <strong>13 古典</strong> <span>旧式衬线</span>
+      <img src="designs/13-gudian.svg" alt="古典">
+    </figure>
+    <figure class="opt">
+      <strong>14 珠宝</strong> <span>高对比，金点在环顶</span>
+      <img src="designs/14-zhubao.svg" alt="珠宝">
+    </figure>
+    <figure class="opt">
+      <strong>15 编辑</strong> <span>杂志衬线</span>
+      <img src="designs/15-bianji.svg" alt="编辑">
+    </figure>
+    <figure class="opt">
+      <strong>16 几何星</strong> <span>两枚方环叠成八角星</span>
+      <img src="designs/16-jixing.svg" alt="几何星">
+    </figure>
+    <figure class="opt">
+      <strong>17 库法</strong> <span>几何库法拉丁字</span>
+      <img src="designs/17-kufa.svg" alt="库法">
+    </figure>
+    <figure class="opt">
+      <strong>18 留白</strong> <span>只留一颗金点</span>
+      <img src="designs/18-liubai.svg" alt="留白">
+    </figure>
+    <figure class="opt">
+      <strong>19 当代</strong> <span>产品常用的无衬线</span>
+      <img src="designs/19-dangdai.svg" alt="当代">
+    </figure>
+    <figure class="opt">
+      <strong>20 秀丽</strong> <span>瘦长衬线</span>
+      <img src="designs/20-xiuli.svg" alt="秀丽">
+    </figure>
+  </section>
+
+  <section class="wrap options">
+    <h2>附录</h2>
+    <p class="note">二十款方向在上面。下面是先前为编织手环准备的十款字。</p>
+    <figure class="opt">
+      <strong>01 铭文扣</strong> <span>Cinzel · 像编绳金属扣上的刻字</span>
+      <img src="options/01-cinzel.svg" alt="Cinzel 字标">
+    </figure>
+    <figure class="opt">
+      <strong>02 细衬线</strong> <span>Cormorant Garamond · 细珠宝衬线</span>
+      <img src="options/02-cormorant.svg" alt="Cormorant Garamond 字标">
+    </figure>
+    <figure class="opt">
+      <strong>03 软衬线</strong> <span>Fraunces · 接近编织的温润</span>
+      <img src="options/03-fraunces.svg" alt="Fraunces 字标">
+    </figure>
+    <figure class="opt">
+      <strong>04 轻时装</strong> <span>Italiana · 极细，适合轻薄手环</span>
+      <img src="options/04-italiana.svg" alt="Italiana 字标">
+    </figure>
+    <figure class="opt">
+      <strong>05 细几何</strong> <span>Josefin Sans · 竖画很细，像一根编绳</span>
+      <img src="options/05-josefin.svg" alt="Josefin Sans 字标">
+    </figure>
+    <figure class="opt">
+      <strong>06 当代无衬线</strong> <span>Outfit · 穿戴产品的干净无衬线</span>
+      <img src="options/06-outfit.svg" alt="Outfit 字标">
+    </figure>
+    <figure class="opt">
+      <strong>07 圆角软绳</strong> <span>Nunito · 转角是圆的，贴近软绳</span>
+      <img src="options/07-nunito.svg" alt="Nunito 字标">
+    </figure>
+    <figure class="opt">
+      <strong>08 石刻扣</strong> <span>Marcellus · 像石材和金属扣</span>
+      <img src="options/08-marcellus.svg" alt="Marcellus 字标">
+    </figure>
+    <figure class="opt">
+      <strong>09 单线</strong> <span>Poiret One · 几乎是单线，像一缕丝</span>
+      <img src="options/09-poiret.svg" alt="Poiret One 字标">
+    </figure>
+    <figure class="opt">
+      <strong>10 宽幅手作</strong> <span>Tenor Sans · 字幅宽，节奏慢</span>
+      <img src="options/10-tenor.svg" alt="Tenor Sans 字标">
+    </figure>
+  </section>
+
+  <footer class="wrap">QIRALUM</footer>
+</body>
+</html>
