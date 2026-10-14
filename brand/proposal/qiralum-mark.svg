@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-128.92 -128.64 259.66 259.66" role="img" aria-labelledby="t d" shape-rendering="geometricPrecision">
   <title id="t">QIRALUM</title>
   <desc id="d">Eight-point star. Two squares in a ring, gold at the center.</desc>
-  <!-- Latin outlines are from Amiri. Arabic outlines are from Noto Naskh Arabic. Both are SIL Open Font License. The star is two squares. -->
-  <g fill="none" stroke="#162041" stroke-linejoin="miter" transform="translate(0.00 0.00) scale(0.989120)"><circle cx="0" cy="0" r="100" stroke-width="2.2"/><path d="M 0.00 -82.00 L 82.00 0.00 L 0.00 82.00 L -82.00 0.00 Z" stroke-width="6.2"/><path d="M 57.98 -57.98 L 57.98 57.98 L -57.98 57.98 L -57.98 -57.98 Z" stroke-width="6.2"/><circle cx="0" cy="0" r="11" fill="#C5A340" stroke="none"/></g>
+  <!-- Latin outlines are from Amiri. Arabic outlines are from Noto Kufi Arabic. Both are SIL Open Font License. The star is two squares. -->
+  <g fill="none" stroke="#162041" stroke-linejoin="miter" transform="translate(0.00 0.00) scale(0.985222)"><circle cx="0" cy="0" r="100" stroke-width="3.0"/><path d="M 0.00 -72.00 L 72.00 0.00 L 0.00 72.00 L -72.00 0.00 Z" stroke-width="13"/><path d="M 50.91 -50.91 L 50.91 50.91 L -50.91 50.91 L -50.91 -50.91 Z" stroke-width="13"/><circle cx="0" cy="0" r="14" fill="#C5A340" stroke="none"/></g>
 </svg>
