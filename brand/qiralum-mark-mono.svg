@@ -2,5 +2,5 @@
   <title id="t">QIRALUM</title>
   <desc id="d">QIRALUM mark in a single ink.</desc>
   <!-- The ring is the existing QIRALUM symbol. The wordmark is a drawn alphabet, not a font. -->
-  <g fill="none"><circle cx="0.00" cy="0.00" r="100.00" stroke="#162041" stroke-width="3.20"/><path d="M -20.21 -68.24 A 71.17 71.17 0 1 0 20.21 -68.24" stroke="#162041" stroke-width="16.19" stroke-linecap="butt"/><circle cx="0.00" cy="-91.81" r="14.23" fill="#162041" stroke="none"/></g>
+  <g fill="none"><circle cx="0.00" cy="0.00" r="100.00" stroke="#162041" stroke-width="3.20"/><path d="M -20.21 -68.24 A 71.17 71.17 0 1 0 20.21 -68.24" stroke="#162041" stroke-width="16.19" stroke-linecap="butt"/><circle cx="0.00" cy="-88.95" r="14.19" fill="#162041" stroke="none"/></g>
 </svg>
