@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-124.00 -124.31 246.00 246.00" role="img" aria-labelledby="t d" shape-rendering="geometricPrecision">
   <title id="t">QIRALUM</title>
   <desc id="d">QIRALUM mark. A fine outer ring, an open inner ring, and a gold point at the crown.</desc>
-  <!-- The ring is the existing QIRALUM symbol. The wordmark is a drawn alphabet, not a font. -->
+  <!-- Wordmark outlines are from Libre Baskerville (SIL Open Font License). The ring is the existing symbol. -->
   <g fill="none"><circle cx="0.00" cy="0.00" r="100.00" stroke="#162041" stroke-width="3.20"/><path d="M -20.21 -68.24 A 71.17 71.17 0 1 0 20.21 -68.24" stroke="#162041" stroke-width="16.19" stroke-linecap="butt"/><circle cx="0.00" cy="-88.95" r="14.19" fill="#C5A340" stroke="none"/></g>
 </svg>
